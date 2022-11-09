@@ -1,7 +1,15 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
+
+
+    }
+
+    // Methods
+    public static void objectTest(){
 
         MovingObjects a = new MovingObjects(1, 3);
         System.out.println("A moving object has been created.");
@@ -16,6 +24,38 @@ public class Main {
         System.out.println("It's current position is:");
         System.out.println("X >  " + a.getPosX());
         System.out.println("Y >  " + a.getPosY());
+
+    }
+
+    public static void jediTest(){
+
+        Jedi aa = new Jedi("Abakin");
+        Sith bb = new Sith("Greebius");
+        System.out.println("A Jedi and Sith has been created.");
+
+        System.out.println("The first Force user is:");
+        System.out.println("Name       >  " + aa.name);
+        System.out.println("Affiliaton >  " + aa.ForceSide());
+        System.out.println();
+
+        System.out.println("The second Force user is:");
+        System.out.println("Name       >  " + bb.name);
+        System.out.println("Affiliaton >  " + bb.ForceSide());
+        System.out.println();
+
+    }
+
+    public static void avatar(){
+        Scanner inP = new Scanner(System.in);
+
+        System.out.println("How much health does the avatar have?");
+        Avatar a = new Avatar( Integer.parseInt(inP.next()) );
+
+        System.out.println("How much does a health potion heal?");
+        HealthPotion h = new HealthPotion( Integer.parseInt(inP.next()) );
+
+        System.out.println("How much hard does poision do?");
+        Poison p = new Poison( Integer.parseInt(inP.next()) );
 
     }
 }
