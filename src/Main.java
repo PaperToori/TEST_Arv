@@ -2,8 +2,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
 
+        // Remove comment slashes and run code to try examples. avatarTest requires terminal input.
+
+        // objectTest();
+        // jediTest();
+        // avatarTest();
 
 
     }
@@ -45,7 +49,7 @@ public class Main {
 
     }
 
-    public static void avatar(){
+    public static void avatarTest(){
         Scanner inP = new Scanner(System.in);
 
         System.out.println("How much health does the avatar have?");
@@ -54,8 +58,23 @@ public class Main {
         System.out.println("How much does a health potion heal?");
         HealthPotion h = new HealthPotion( Integer.parseInt(inP.next()) );
 
-        System.out.println("How much hard does poision do?");
+        System.out.println("How much harm does poison do?");
         Poison p = new Poison( Integer.parseInt(inP.next()) );
+
+        System.out.println();
+        System.out.println("The Avatar has " + a.hitpoints + " hitpoints.");
+        System.out.println("The Avatar drinks the poison.");
+        p.use(a);
+        System.out.println("The Avatar now has " + a.hitpoints + " hitpoints.");
+        if (a.hitpoints < 1) {
+            System.out.println("The Avatar is dead.");
+        } else {
+            System.out.println("The Avatar drinks the health potion.");
+            h.use(a);
+            System.out.println("The Avatar now has " + a.hitpoints + " hitpoints.");
+            System.out.println("The Avatar lives.");
+        }
+
 
     }
 }

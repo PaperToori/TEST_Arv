@@ -4,7 +4,7 @@ public class Potion {
 
     // Methods
     public Avatar use (Avatar a){
-        a.hitpoints += effect;
+        System.out.println("Nothing happens.");
         return a;
     }
 }
